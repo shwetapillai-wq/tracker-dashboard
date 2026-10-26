@@ -45,7 +45,7 @@ def bar(series, horizontal=False):
     base = alt.Chart(d).mark_bar().encode(x=x, y=y, tooltip=["Name", alt.Tooltip("Hours:Q", format=",.1f")])
     st.altair_chart(base.properties(width="container", height=320))
 
-st.title("Projects Tracker Dashboard")
+st.title("Project Tracker")
 if not SHEET_ID and not LOCAL_FILE:
     st.error("SHEET_ID is not set. Add it in Settings > Secrets.")
     st.stop()
